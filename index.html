@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
     rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -20,7 +20,7 @@
       theme: {
         extend: {
           fontFamily: {
-            display: ['Pixelify Sans', 'Outfit', 'sans-serif'],
+            display: ['undefined medium', 'Outfit', 'sans-serif'],
             body: ['Inter', 'sans-serif'],
           },
           colors: {
@@ -48,6 +48,15 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'undefined medium';
+      src: url('fonts/undefined-medium.woff2') format('woff2'),
+        url('fonts/undefined-medium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
     *,
     *::before,
     *::after {
@@ -80,7 +89,7 @@
     /* Heading font */
     h1,
     h2 {
-      font-family: 'Pixelify Sans', 'Outfit', sans-serif;
+      font-family: 'undefined medium', 'Outfit', sans-serif;
       letter-spacing: -0.01em;
     }
 
@@ -566,7 +575,8 @@
       <!-- Mobile hamburger -->
       <div class="flex items-center gap-3 md:hidden">
         <button id="theme-toggle-mobile" aria-label="Toggle dark mode"
-          style="width:40px;height:40px;border-radius:10px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.06);color:#f1f5f9;">
+          style="width:40px;height:40px;border-radius:10px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;"
+          class="dark:bg-white/[0.06] dark:text-slate-100 bg-black/[0.06] text-gray-800">
           <i data-lucide="moon" class="w-5 h-5"></i>
         </button>
         <button id="hamburger" aria-label="Open menu" style="background:none;border:none;cursor:pointer;padding:6px;">
@@ -678,8 +688,8 @@
           <div class="glass-card rounded-2xl p-5">
             <p class="text-xs font-semibold uppercase tracking-wider dark:text-brand-400 text-brand-600 mb-1">Education
             </p>
-            <p class="font-display font-semibold dark:text-white text-gray-900">BSc Computer Science <span
-                class="tech-pill ml-2" style="font-size: 0.65rem; padding: 2px 8px; white-space: nowrap;">Expected
+            <p class="font-display font-semibold dark:text-white text-gray-900 text-sm" style="white-space:nowrap;">BSc
+              Computer Science <span class="tech-pill ml-2" style="font-size:0.65rem;padding:2px 8px;">Expected
                 First-Class</span></p>
             <p class="text-sm dark:text-slate-400 text-slate-500">University of Aberdeen</p>
             <p class="text-xs dark:text-slate-500 text-slate-400 mt-1">Expected 2027</p>
@@ -714,14 +724,14 @@
               <span class="tech-pill">05/2026 – Present</span>
             </div>
             <ul class="space-y-2 text-sm dark:text-slate-300 text-slate-600" style="line-height:1.7;text-align:left;">
-              <li class="flex gap-2"><span class="dark:text-brand-400 text-brand-600 mt-0.5">▸</span> Developing and
-                maintaining a Trello-like application using Microsoft Power Platform for 300+ staff users.</li>
-              <li class="flex gap-2"><span class="dark:text-brand-400 text-brand-600 mt-0.5">▸</span> Collaborating with
-                stakeholders across multiple departments to gather requirements and deliver scalable solutions.</li>
-              <li class="flex gap-2"><span class="dark:text-brand-400 text-brand-600 mt-0.5">▸</span> Integrating Power
-                Apps with Microsoft APIs and SharePoint for automated approval and task management workflows.</li>
-              <li class="flex gap-2"><span class="dark:text-brand-400 text-brand-600 mt-0.5">▸</span> Designing
-                responsive UI/UX with dynamic filtering and conditional formatting.</li>
+              <li class="flex gap-2"><span class="dark:text-brand-400 text-brand-600 mt-0.5">▸</span> Returned on offer
+                to continue developing the collaborative project management app built during my internship.</li>
+              <li class="flex gap-2"><span class="dark:text-brand-400 text-brand-600 mt-0.5">▸</span> Owning the
+                full development lifecycle; scoping new features, shipping updates, and resolving production issues.
+              </li>
+              <li class="flex gap-2"><span class="dark:text-brand-400 text-brand-600 mt-0.5">▸</span> Expanding the
+                platform with new automation workflows and deeper Microsoft API integrations based on ongoing
+                stakeholder feedback.</li>
             </ul>
           </div>
         </div>
